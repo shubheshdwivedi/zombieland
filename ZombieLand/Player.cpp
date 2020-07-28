@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "GameConstants.h"
 
 Player::Player() {
 
@@ -6,7 +7,7 @@ Player::Player() {
 	m_MaxHealth = START_HEALTH;
 	m_Speed = START_SPEED;
 
-	m_Texture.loadFromFile("graphics/player.h");
+	m_Texture.loadFromFile(Constants::PLAYER_PNG);
 	m_Sprite.setTexture(m_Texture);
 
 	m_Sprite.setOrigin(25,25);
