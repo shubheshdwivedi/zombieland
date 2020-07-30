@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
+#include "TextureHolder.h"
+#include "GameConstants.h"
 
 class Player
 {
@@ -76,6 +77,8 @@ class Player
 		void upgradeHealth();
 
 		void increaseHealthLevel(int amount);
+
+		void resetPlayerStats();
 
 
 };

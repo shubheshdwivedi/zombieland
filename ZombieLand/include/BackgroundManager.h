@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "GameConstants.h"
+#include "TextureHolder.h"
 
 class BackgroundManager {
 
@@ -14,11 +15,9 @@ class BackgroundManager {
 
 	sf::VertexArray background;
 
-	sf::Texture backgroundTexture;
+	sf::Texture backgroundTexture = TextureHolder::getTexture(Constants::BACKGROUND_SHEET_PNG);
 
 	public:
-
-		BackgroundManager();
 	
 		int buildBackGround(sf::IntRect arena);
 

@@ -1,15 +1,15 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Player.h"
+#include "GameConstants.h"
+#include "BackgroundManager.h"
+#include "Zombie.h"
+#include "TextureHolder.h"
+#include "Bullet.h"
+#include "SpawnManager.h"
+#include "HUDManager.h"
 #include <fstream>
-#include "include/Player.h"
-#include "include/GameConstants.h"
-#include "include/BackgroundManager.h"
-#include "include/Zombie.h"
-#include "include/TextureHolder.h"
-#include "include/Bullet.h"
-#include "include/SpawnManager.h"
-#include "include/HUDManager.h"
-#include "include/SoundManager.h";
+#include "SoundManager.h";
 
 class GameManager {
 

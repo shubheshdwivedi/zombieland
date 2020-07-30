@@ -11,6 +11,6 @@ class TextureHolder {
 
 	public:
 
-		static TextureHolder* getInstance();
-		sf::Texture& getTexture(std::string textureName);
+		TextureHolder();
+		static sf::Texture& getTexture(std::string textureName);
 };

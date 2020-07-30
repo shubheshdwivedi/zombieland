@@ -1,15 +1,15 @@
-#include "TextureHolder.h"
+#include "include/TextureHolder.h"
+#include <assert.h>
 
 TextureHolder* TextureHolder::instance = nullptr;
 
-TextureHolder* TextureHolder::getInstance() {
-	if (instance == nullptr) {
-		instance = new TextureHolder;
-	}
-	return instance;
+TextureHolder::TextureHolder() {
+	assert(instance == nullptr);
+	instance = this;	
 }
 
 sf::Texture& TextureHolder::getTexture(std::string textureName) {
+	auto& texturesMap = instance->texturesMap;
 	auto keyValuePair = texturesMap.find(textureName);
 	if (keyValuePair != texturesMap.end())
 		return keyValuePair->second;	

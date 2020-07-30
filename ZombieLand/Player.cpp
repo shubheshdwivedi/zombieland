@@ -1,5 +1,5 @@
-#include "Player.h"
-#include "GameConstants.h"
+#include "include/Player.h"
+
 
 Player::Player() {
 
@@ -7,11 +7,17 @@ Player::Player() {
 	m_MaxHealth = START_HEALTH;
 	m_Speed = START_SPEED;
 
-	m_Texture.loadFromFile(Constants::PLAYER_PNG);
+	m_Texture = TextureHolder::getTexture(Constants::PLAYER_PNG);
 	m_Sprite.setTexture(m_Texture);
 
 	m_Sprite.setOrigin(25,25);
 
+}
+
+void Player::resetPlayerStats(){
+	m_Speed = START_SPEED;
+	m_Health = START_HEALTH;
+	m_MaxHealth = START_HEALTH;
 }
 
 void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize) {

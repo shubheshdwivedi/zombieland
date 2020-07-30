@@ -167,18 +167,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="GameConstants.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="HUDManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="BackgroundManager.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="SpawnManager.cpp" />
     <ClCompile Include="TextureHolder.cpp" />
+    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameConstants.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="BackgroundManager.h" />
-    <ClInclude Include="TextureHolder.h" />
+    <ClInclude Include="include\BackgroundManager.h" />
+    <ClInclude Include="include\Bullet.h" />
+    <ClInclude Include="include\GameConstants.h" />
+    <ClInclude Include="include\GameManager.h" />
+    <ClInclude Include="include\HUDManager.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\SoundManager.h" />
+    <ClInclude Include="include\SpawnManager.h" />
+    <ClInclude Include="include\TextureHolder.h" />
+    <ClInclude Include="include\Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

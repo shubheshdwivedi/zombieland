@@ -1,8 +1,4 @@
-#include "BackgroundManager.h"
-
-BackgroundManager::BackgroundManager() {
-	backgroundTexture.loadFromFile(Constants::BACKGROUND_SHEET_PNG);
-}
+#include "include/BackgroundManager.h"
 
 int BackgroundManager::buildBackGround(sf::IntRect arenaSize) {
 
@@ -13,7 +9,7 @@ int BackgroundManager::buildBackGround(sf::IntRect arenaSize) {
 	worldHeight = arenaSize.height / TILE_SIZE;
 	worldWidth = arenaSize.width / TILE_SIZE;
 	background.resize(worldHeight * worldWidth * QUAD_VERTS);
-
+	currentVertex = 0;
 	int w = 0, h = 0;
 	for (w = 0; w < worldWidth; w++) {
 		for (h = 0; h < worldHeight; h++) {
